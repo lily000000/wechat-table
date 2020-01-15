@@ -1,0 +1,47 @@
+
+.order_charts{
+    .btn_wrap{
+        width: 400px;
+        .el-radio-group{
+            width: 80%;
+            margin:auto;
+        }
+        .el-radio-button{
+             width: 48%;
+        }
+        .el-radio-button__inner{
+            width: 100%;
+        }
+
+    }
+    .el-card__header{
+        border-bottom: 0px;
+    }
+    .header-wrap{
+        display: flex;
+        justify-content:space-between;
+    
+    }
+    .time-right{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+        .areaTime{
+            // margin-left: 10px;
+            // margin-right: 10px;
+        }
+    }
+
+}
+.type_item{
+    display: flex;justify-content: flex-end;margin-top: 10px;
+    .el-select{
+      width: 100px;
+      margin-right: 5px;
+
+    }
+   
+ }
+ .export-btn{
+     margin-left: 10px;
+ }

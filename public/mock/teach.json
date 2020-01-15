@@ -1,0 +1,224 @@
+{
+    "msg": "操作成功",
+    "status": 200,
+    "timestamp": 1574770680023,
+    "data": {
+        "data": [
+            {
+                "goodNotUrgency": 4,
+                "ratioGNotUrgency": "40%",
+                "waitCommitUrgency": 0,
+                "notGoodNotUrgency": 0,
+                "notReachUrgency": 0,
+                "reach": 12,
+                "use": 7,
+                "notUseNotUrgency": 0,
+                "ratioG": "41.67%",
+                "good": 5,
+                "ratioNNotUrgency": "0%",
+                "ratioF": "63.16%",
+                "useNotUrgency": 6,
+                "ratioGUrgency": "50%",
+                "total": 19,
+                "ratioFUrgency": "66.67%",
+                "totalUrgency": 3,
+                "notReachNotUrgency": 0,
+                "waitDeal": 7,
+                "finish": 12,
+                "notReach": 0,
+                "goodUrgency": 1,
+                "ratioNUrgency": "0%",
+                "reachUrgency": 2,
+                "ratioRUrgency": "0%",
+                "reachNotUrgency": 10,
+                "waitDealNotUrgency": 6,
+                "waitCommitNotUrgency": 0,
+                "notGood": 0,
+                "finishNotUrgency": 10,
+                "notGoodUrgency": 0,
+                "waitCommit": 0,
+                "totalNotUrgency": 16,
+                "ratioR": "0%",
+                "notUse": 0,
+                "finishUrgency": 2,
+                "notUseUrgency": 0,
+                "ratioN": "0%",
+                "waitDealUrgency": 1,
+                "useUrgency": 1,
+                "ratioRNotUrgency": "0%",
+                "user": "合计",
+                "ratioFNotUrgency": "62.5%"
+            },
+            {
+                "goodNotUrgency": 2,
+                "ratioGNotUrgency": "66.67%",
+                "waitCommitUrgency": 0,
+                "notGoodNotUrgency": 0,
+                "notReachUrgency": 0,
+                "use": 2,
+                "reach": 5,
+                "notUseNotUrgency": 0,
+                "ratioG": "60%",
+                "good": 3,
+                "ratioNNotUrgency": "0%",
+                "useNotUrgency": 1,
+                "ratioF": "45.45%",
+                "ratioGUrgency": "50%",
+                "total": 11,
+                "ratioFUrgency": "66.67%",
+                "totalUrgency": 3,
+                "notReachNotUrgency": 0,
+                "waitDeal": 6,
+                "finish": 5,
+                "notReach": 0,
+                "goodUrgency": 1,
+                "ratioNUrgency": "0%",
+                "reachUrgency": 2,
+                "ratioRUrgency": "0%",
+                "reachNotUrgency": 3,
+                "waitDealNotUrgency": 5,
+                "waitCommitNotUrgency": 0,
+                "notGood": 0,
+                "userId": "143",
+                "finishNotUrgency": 3,
+                "notGoodUrgency": 0,
+                "waitCommit": 0,
+                "totalNotUrgency": 8,
+                "ratioR": "0%",
+                "notUse": 0,
+                "finishUrgency": 2,
+                "notUseUrgency": 0,
+                "ratioN": "0%",
+                "waitDealUrgency": 1,
+                "useUrgency": 1,
+                "ratioRNotUrgency": "0%",
+                "user": "银军",
+                "ratioFNotUrgency": "37.5%"
+            },
+            {
+                "goodNotUrgency": 2,
+                "ratioGNotUrgency": "28.57%",
+                "waitCommitUrgency": 0,
+                "notGoodNotUrgency": 0,
+                "notReachUrgency": 0,
+                "use": 5,
+                "reach": 7,
+                "notUseNotUrgency": 0,
+                "ratioG": "28.57%",
+                "good": 2,
+                "ratioNNotUrgency": "0%",
+                "useNotUrgency": 5,
+                "ratioF": "87.5%",
+                "ratioGUrgency": "0%",
+                "total": 8,
+                "ratioFUrgency": "0%",
+                "totalUrgency": 0,
+                "notReachNotUrgency": 0,
+                "waitDeal": 1,
+                "finish": 7,
+                "notReach": 0,
+                "goodUrgency": 0,
+                "ratioNUrgency": "0%",
+                "reachUrgency": 0,
+                "ratioRUrgency": "0%",
+                "reachNotUrgency": 7,
+                "waitDealNotUrgency": 1,
+                "waitCommitNotUrgency": 0,
+                "notGood": 0,
+                "userId": "79",
+                "finishNotUrgency": 7,
+                "notGoodUrgency": 0,
+                "waitCommit": 0,
+                "totalNotUrgency": 8,
+                "ratioR": "0%",
+                "notUse": 0,
+                "finishUrgency": 0,
+                "notUseUrgency": 0,
+                "ratioN": "0%",
+                "waitDealUrgency": 0,
+                "useUrgency": 0,
+                "ratioRNotUrgency": "0%",
+                "user": "王媛",
+                "ratioFNotUrgency": "87.5%"
+            }
+        ],
+        "cols": [
+            {
+                "key": "user",
+                "sort": false,
+                "title": "教研"
+            },
+            {
+                "key": "total",
+                "sort": true,
+                "title": "已领取数量"
+            },
+            {
+                "key": "waitDeal",
+                "sort": true,
+                "title": "待处理"
+            },
+            {
+                "key": "waitCommit",
+                "sort": true,
+                "title": "待确认"
+            },
+            {
+                "key": "finish",
+                "sort": true,
+                "title": "已完成"
+            },
+            {
+                "key": "ratioF",
+                "sort": true,
+                "title": "完成率"
+            },
+            {
+                "key": "reach",
+                "sort": true,
+                "title": "处理时长达标量"
+            },
+            {
+                "key": "notReach",
+                "sort": true,
+                "title": "处理超时量"
+            },
+            {
+                "key": "ratioR",
+                "sort": true,
+                "title": "处理超时率"
+            },
+            {
+                "key": "good",
+                "sort": true,
+                "title": "好用量"
+            },
+            {
+                "key": "use",
+                "sort": true,
+                "title": "可用量"
+            },
+            {
+                "key": "notGood",
+                "sort": true,
+                "title": "不好用量"
+            },
+            {
+                "key": "notUse",
+                "sort": true,
+                "title": "不可用量"
+            },
+            {
+                "key": "ratioG",
+                "sort": true,
+                "title": "好评率"
+            },
+            {
+                "key": "ratioN",
+                "sort": true,
+                "title": "差评率"
+            }
+        ]
+    },
+    "ext": null
+}

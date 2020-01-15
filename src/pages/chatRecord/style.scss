@@ -1,0 +1,22 @@
+.box{
+    // padding: 20px;
+    background: #fff;  
+    .box-tit{
+        margin-bottom: 10px;
+    }
+    .box-card{
+        width: 100%;
+        .text {
+            font-size: 14px;
+        }
+        
+        .item {
+            padding: 18px 0;
+            border-bottom:1px solid #ebebeb;
+            cursor: pointer;
+        }
+        
+
+    }
+}
+

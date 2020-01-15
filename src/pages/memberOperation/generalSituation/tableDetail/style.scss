@@ -1,0 +1,40 @@
+.table_detail{
+    margin-top: 40px;
+    .table_tit{
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    .pagination{
+        text-align: right;
+    }
+    .ellipsis{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+
+    }
+    
+}
+.scrool_class{
+    font-size: 12px;
+    max-width: 200px;
+}
+.scrool_class .text-cont {
+    font-size: 12px;
+    max-height: 125px;
+    overflow-y: auto;
+    padding: 0 5px 0 5px;
+  }
+  .scrool_class .text-cont::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  .scrool_class .text-cont::-webkit-scrollbar:vertical {
+    width: 11px;
+  }
+  .scrool_class .text-cont::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+  }

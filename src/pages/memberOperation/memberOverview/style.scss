@@ -1,0 +1,120 @@
+.toSearch {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #ececec;
+    z-index: 99999;
+    cursor: pointer;
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  .time-right {
+    text-align: right;
+    float: right;
+  }
+  
+  .time-left {
+    float: left;
+    position: relative;
+    top: 30px;
+    left: 90px;
+  }
+  
+  .head {
+    padding: 20px 20px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #EBEEF5;
+    box-sizing:border-box;
+  }
+  
+  .head-left {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    .head-title {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+  
+  .head-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .boxList {
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #EBEEF5;
+    box-sizing:border-box;
+    margin-top: 10px;
+    .box_tit{
+      padding: 20px;
+    }
+  }
+  
+  .list {
+    padding: 10px;
+  }
+  
+  .list > .list-one {
+    float: left;
+    box-sizing: border-box;
+    padding-right: 10px;
+    position: relative;
+  }
+  .toolTip {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  .list > .list-one:last-child {
+    padding-right: 0px;
+  }
+  .list > .list-one:last-child .toolTip {
+    right: 10px;
+  }
+  .list > .list-one > .list-main {
+    padding: 30px 0;
+    background: #f9f9f9;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .list > .list-one > .list-main > p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #606266;
+  }
+  .rTime {
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 10px;
+    color: #606266;
+  }
+  .type_item{
+     display: flex;justify-content: flex-end;margin-top: 10px;
+     .el-select{
+       width: 100px;
+       margin-right: 5px;
+
+     }
+    
+  }
