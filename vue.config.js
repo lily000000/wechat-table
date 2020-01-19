@@ -14,7 +14,7 @@ module.exports = {
       "/": {
         ws:false,
        //target: "http://192.168.0.100",
-        target: "http://192.168.50.165:8886",//liu
+        target: "http://192.168.50.166:8886",//liu
         // target: "http://192.168.50.147:8080",//zhuo 
        //target:"http://118.31.110.200",
      // target:"http://192.168.50.163:8080",

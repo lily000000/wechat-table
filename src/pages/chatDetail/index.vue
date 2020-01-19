@@ -12,11 +12,11 @@
             range-separator="至"
             start-placeholder="开始日期"
             end-placeholder="结束日期"
-            style="width:230px"
+            style="width:240px"
           ></el-date-picker>
         </el-form-item>
         <el-form-item label>
-          <el-select v-model="form.type" placeholder="微信昵称（微信名）">
+          <el-select v-model="form.type" placeholder="微信昵称（微信名）" @change="onChange">
             <el-option
               v-for="item in options"
               :key="item.value"
@@ -35,7 +35,7 @@
         </el-form-item>
       </el-form>
     </div>
-    <el-card class="box-card" v-loading="loading">
+    <el-card class="box-card" >
       <div class="nav-container">
         <div class="nav-left" v-loading="partLoading" style="height:100%">
           <ul class="nav-row" style="height:100%">
@@ -80,7 +80,7 @@
             </li>
           </ul>
         </div>
-        <div class="nav-right">
+        <div class="nav-right" v-loading="loading">
           <div class="wx-container">
             <div v-for="(item,index) in chatRecordData" :key="index" :id="'list'+index">
               <div class="wx-row wx-msg-row--other" v-if="item.msgType == '1'">
@@ -142,6 +142,7 @@ import $ from "jquery";
 export default {
   data() {
     return {
+      message:"微信昵称（微信名）",
       partLoading: true,
       loadingStatus: true,
       isPartActive: 0,
@@ -191,13 +192,30 @@ export default {
     }
   },
   methods: {
+    onChange(){
+      if(this.form.type ==1){
+        this.message = "微信昵称（微信名）";
+      }else if(this.form.type ==2){
+        this.message = "微信备注";
+      }else if(this.form.type == 3){
+        this.message = "微信号";
+      }else if(this.form.type == 4){
+        this.message = "微信内容";
+      }
+    },
     //获取成长顾问列表
     getConsultantList() {
+      // this.loading = true;
+      this.partLoading = true;
+      this.loadingStatus = true;
       this.loading = true;
       const params = this.form;
       // console.log('获取成长顾问',this.form)
       this.$API.getConsultantList(params).then(res => {
         this.partLoading = false;
+        // if(data.length==0){
+        //   this.loading = false;        
+        // }
         const { data, msg, status } = res;
         if (status == 200) {
           this.wxPartData = data;
@@ -207,13 +225,21 @@ export default {
           if (data.length > 0) {
             this.getContactListReq(data[0].wechat);
             this.form.wechat = data[0].wechat;
+          }else{
+            this.loadingStatus = false;
+            this.loading = false;
+            if(this.form.keyword){
+              this.$message.warning(`暂无匹配到关于${this.message}—— ${this.form.keyword} 的数据`)
+            }else{
+              this.$message.warning(`暂无匹配到关于${this.message}的数据`)
+            }
+           
           }
         }
       });
     },
     //获取好友列表
     getContactListReq(wechatId) {
-      this.loading = true;
       const params = Object.assign({}, this.form, { wechat: wechatId });
       this.$API.getContactList(params).then(res => {
         this.loadingStatus = false;
@@ -238,11 +264,10 @@ export default {
     },
     //获取好友聊天记录
     getChatByGroup(params) {
-      this.loading = true;
       this.$API.getChatRecordByGroup(params).then(res => {
         const { data, msg, status } = res;
-        if (status == 200) {
-          this.loading = false;
+        this.loading = false;
+        if (status == 200) { 
           this.chatRecordData = data;
           if (this.form.keyword != "" && this.form.type == 4) {
             $(".nav-right").scrollTop(0);
