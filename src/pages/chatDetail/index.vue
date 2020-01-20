@@ -142,7 +142,6 @@ import $ from "jquery";
 export default {
   data() {
     return {
-      message:"微信昵称（微信名）",
       partLoading: true,
       loadingStatus: true,
       isPartActive: 0,
@@ -193,15 +192,6 @@ export default {
   },
   methods: {
     onChange(){
-      if(this.form.type ==1){
-        this.message = "微信昵称（微信名）";
-      }else if(this.form.type ==2){
-        this.message = "微信备注";
-      }else if(this.form.type == 3){
-        this.message = "微信号";
-      }else if(this.form.type == 4){
-        this.message = "微信内容";
-      }
     },
     //获取成长顾问列表
     getConsultantList() {
@@ -209,8 +199,9 @@ export default {
       this.partLoading = true;
       this.loadingStatus = true;
       this.loading = true;
+      this.form.wechat = "";
       const params = this.form;
-      // console.log('获取成长顾问',this.form)
+      console.log(this.form)
       this.$API.getConsultantList(params).then(res => {
         this.partLoading = false;
         // if(data.length==0){
@@ -228,11 +219,7 @@ export default {
           }else{
             this.loadingStatus = false;
             this.loading = false;
-            if(this.form.keyword){
-              this.$message.warning(`暂无匹配到关于${this.message}—— ${this.form.keyword} 的数据`)
-            }else{
-              this.$message.warning(`暂无匹配到关于${this.message}的数据`)
-            }
+            this.$message.warning("未查询到聊天内容，请确认是否导入");
            
           }
         }
@@ -243,6 +230,7 @@ export default {
       const params = Object.assign({}, this.form, { wechat: wechatId });
       this.$API.getContactList(params).then(res => {
         this.loadingStatus = false;
+
         const { data, msg, status } = res;
         if (status == 200) {
           this.wechatData = data;
@@ -253,6 +241,8 @@ export default {
           }
           if (data.length == 0) {
             this.chatRecordData = [];
+            this.loading = false;
+            this.$message.warning("未查询到聊天内容，请确认是否导入");
           } else {
             // data[0].type = '';
             data[0].wechat = wechatId;
@@ -312,9 +302,10 @@ export default {
     },
     search() {
       this.isActive = 0;
+      this.form.wechat = "";
       this.getConsultantList();
       // this.getContactListReq(this.form.wechat);
-      // console.log(this.form)
+      
     },
     onTime(e) {
       if (e) {
